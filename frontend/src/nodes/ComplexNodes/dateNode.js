@@ -1,4 +1,4 @@
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 
 // Create a proper React component for the date content
 const DateContent = ({ state, updateState }) => {
@@ -82,8 +82,8 @@ const DateContent = ({ state, updateState }) => {
           <option value='EU'>EU Format</option>
         </select>
       </div>
-        <div
-          style={{
+      <div
+        style={{
           padding: '16px',
           backgroundColor: '#f1f5f9',
           borderRadius: '8px',
@@ -91,12 +91,12 @@ const DateContent = ({ state, updateState }) => {
           color: '#334155',
           textAlign: 'center',
           border: '1px solid #e2e8f0',
-            wordBreak: 'break-all',
-          }}
-        >
-          {formatDate()}
-        </div>
+          wordBreak: 'break-all',
+        }}
+      >
+        {formatDate()}
       </div>
+    </div>
   );
 };
 

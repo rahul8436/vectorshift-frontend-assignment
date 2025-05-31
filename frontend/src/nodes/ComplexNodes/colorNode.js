@@ -1,14 +1,16 @@
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 
 // Create a proper React component for the color content
 const ColorContent = ({ state, updateState }) => {
   const hexToRgb = (hex) => {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? {
+    return result
+      ? {
           r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16)
-    } : null;
+          b: parseInt(result[3], 16),
+        }
+      : null;
   };
 
   const handleColorChange = (e) => {
@@ -19,22 +21,26 @@ const ColorContent = ({ state, updateState }) => {
   };
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
-      gap: '16px',
-      width: '100%',
-      maxWidth: '300px',
-      padding: '24px',
-      boxSizing: 'border-box',
-      margin: '0 auto',
-    }}>
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '8px',
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
         width: '100%',
-      }}>
+        maxWidth: '300px',
+        padding: '24px',
+        boxSizing: 'border-box',
+        margin: '0 auto',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          width: '100%',
+        }}
+      >
         <label
           style={{
             fontSize: '12px',
@@ -61,12 +67,14 @@ const ColorContent = ({ state, updateState }) => {
           }}
         />
       </div>
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '8px',
-        width: '100%',
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          width: '100%',
+        }}
+      >
         <label
           style={{
             fontSize: '12px',
@@ -96,12 +104,14 @@ const ColorContent = ({ state, updateState }) => {
           {state.hex}
         </div>
       </div>
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '8px',
-        width: '100%',
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          width: '100%',
+        }}
+      >
         <label
           style={{
             fontSize: '12px',
@@ -111,8 +121,8 @@ const ColorContent = ({ state, updateState }) => {
         >
           RGB
         </label>
-          <div
-            style={{
+        <div
+          style={{
             width: '100%',
             padding: '12px',
             backgroundColor: '#f1f5f9',
@@ -126,10 +136,12 @@ const ColorContent = ({ state, updateState }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            }}
-          >
-          {state.rgb ? `rgb(${state.rgb.r}, ${state.rgb.g}, ${state.rgb.b})` : 'Invalid color'}
-          </div>
+          }}
+        >
+          {state.rgb
+            ? `rgb(${state.rgb.r}, ${state.rgb.g}, ${state.rgb.b})`
+            : 'Invalid color'}
+        </div>
       </div>
     </div>
   );

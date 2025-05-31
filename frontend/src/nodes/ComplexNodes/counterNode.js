@@ -1,4 +1,4 @@
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 
 // Create a proper React component for the counter content
 const CounterContent = ({ state, updateState }) => {
@@ -19,14 +19,14 @@ const CounterContent = ({ state, updateState }) => {
         {state.count}
       </div>
       <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
-          <button
+        <button
           onClick={() => updateState('count')(state.count - 1)}
-            style={{
+          style={{
             padding: '12px 24px',
             border: '1px solid #e2e8f0',
             borderRadius: '8px',
             backgroundColor: '#f8fafc',
-              cursor: 'pointer',
+            cursor: 'pointer',
             fontSize: '16px',
             fontWeight: '600',
             color: '#334155',
@@ -39,18 +39,18 @@ const CounterContent = ({ state, updateState }) => {
           onMouseOut={(e) => {
             e.target.style.backgroundColor = '#f8fafc';
             e.target.style.transform = 'translateY(0)';
-            }}
-          >
-            -
-          </button>
-          <button
+          }}
+        >
+          -
+        </button>
+        <button
           onClick={() => updateState('count')(state.count + 1)}
-            style={{
+          style={{
             padding: '12px 24px',
             border: '1px solid #e2e8f0',
             borderRadius: '8px',
             backgroundColor: '#f8fafc',
-              cursor: 'pointer',
+            cursor: 'pointer',
             fontSize: '16px',
             fontWeight: '600',
             color: '#334155',
@@ -63,12 +63,12 @@ const CounterContent = ({ state, updateState }) => {
           onMouseOut={(e) => {
             e.target.style.backgroundColor = '#f8fafc';
             e.target.style.transform = 'translateY(0)';
-            }}
-          >
-            +
-          </button>
-        </div>
+          }}
+        >
+          +
+        </button>
       </div>
+    </div>
   );
 };
 

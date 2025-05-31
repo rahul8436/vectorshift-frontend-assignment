@@ -1,6 +1,6 @@
 // inputNode.js
 
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 
 // Create a proper React component for the input content
 const InputContent = ({ state, updateState }) => {

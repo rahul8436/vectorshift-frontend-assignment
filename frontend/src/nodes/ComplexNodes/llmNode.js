@@ -1,6 +1,6 @@
 // llmNode.js
 
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 
 // Create a proper React component for the LLM content
 const LLMContent = ({ state, updateState }) => {

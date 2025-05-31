@@ -1,6 +1,6 @@
 // NodeFactory.js
 import { useState, useEffect } from 'react';
-import { BaseNode } from './BaseNode';
+import { BaseNode } from '../BaseNode';
 
 /**
  * NodeFactory provides a higher-level abstraction for creating nodes

@@ -6,15 +6,20 @@ import { useState, useRef, useCallback } from 'react';
 import ReactFlow, { Controls, Background, MiniMap } from 'reactflow';
 import { useStore } from './store';
 import { shallow } from 'zustand/shallow';
-import { InputNode } from './nodes/inputNode';
-import { LLMNode } from './nodes/llmNode';
-import { OutputNode } from './nodes/outputNode';
-import { TextNode } from './nodes/textNode';
-import { CounterNode } from './nodes/counterNode';
-import { MathNode } from './nodes/mathNode';
-import { ColorNode } from './nodes/colorNode';
-import { DateNode } from './nodes/dateNode';
-import { JsonNode } from './nodes/jsonNode';
+import { InputNode } from './nodes/ComplexNodes/inputNode';
+import { LLMNode } from './nodes/ComplexNodes/llmNode';
+import { OutputNode } from './nodes/ComplexNodes/outputNode';
+import { TextNode } from './nodes/ComplexNodes/textNode';
+import { CounterNode } from './nodes/ComplexNodes/counterNode';
+import { MathNode } from './nodes/ComplexNodes/mathNode';
+import { ColorNode } from './nodes/ComplexNodes/colorNode';
+import { DateNode } from './nodes/ComplexNodes/dateNode';
+import { JsonNode } from './nodes/ComplexNodes/jsonNode';
+import { ToggleNode } from './nodes/SimpleNodes/toggleNode';
+import { NumberNode } from './nodes/SimpleNodes/numberNode';
+import { EchoNode } from './nodes/SimpleNodes/echoNode';
+import { SimpleTextNode } from './nodes/SimpleNodes/simpleTextNode';
+import { SelectNode } from './nodes/SimpleNodes/selectNode';
 
 import 'reactflow/dist/style.css';
 
@@ -30,6 +35,11 @@ const nodeTypes = {
   color: ColorNode,
   date: DateNode,
   json: JsonNode,
+  toggle: ToggleNode,
+  number: NumberNode,
+  echo: EchoNode,
+  simpleText: SimpleTextNode,
+  select: SelectNode,
 };
 
 const selector = (state) => ({

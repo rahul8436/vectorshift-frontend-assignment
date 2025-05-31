@@ -1,4 +1,4 @@
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 
 // Create a proper React component for the math content
 const MathContent = ({ state, updateState }) => {
@@ -18,24 +18,28 @@ const MathContent = ({ state, updateState }) => {
   };
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
-      gap: '16px',
-      width: '100%',
-      maxWidth: '300px',
-      padding: '3px 5px',
-      boxSizing: 'border-box',
-      margin: '0 auto',
-    }}>
-      <div style={{ 
-        display: 'flex', 
-        gap: '12px', 
-        alignItems: 'center',
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
         width: '100%',
-        justifyContent: 'space-between',
-        padding: '0',
-      }}>
+        maxWidth: '300px',
+        padding: '3px 5px',
+        boxSizing: 'border-box',
+        margin: '0 auto',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          gap: '12px',
+          alignItems: 'center',
+          width: '100%',
+          justifyContent: 'space-between',
+          padding: '0',
+        }}
+      >
         <input
           type='number'
           value={state.value1}

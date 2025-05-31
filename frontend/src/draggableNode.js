@@ -39,6 +39,11 @@ export const DraggableNode = ({ type, label }) => {
       date: '📅',
       json: '📋',
       numberRange: '📊',
+      echo: '🔊',
+      select: '🔄',
+      simpleText: '📝',
+      number: '🔢',
+      toggle: '🔄',
     };
     return icons[type] || '📦';
   };

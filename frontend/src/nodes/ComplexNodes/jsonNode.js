@@ -1,24 +1,28 @@
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 
 // Create a proper React component for the JSON content
 const JsonContent = ({ state, updateState }) => {
   return (
-    <div style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
-      gap: '16px',
-      width: '100%',
-      maxWidth: '300px',
-      padding: '24px',
-      boxSizing: 'border-box',
-      margin: '0 auto',
-    }}>
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '8px',
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
         width: '100%',
-      }}>
+        maxWidth: '300px',
+        padding: '24px',
+        boxSizing: 'border-box',
+        margin: '0 auto',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          width: '100%',
+        }}
+      >
         <label
           style={{
             fontSize: '12px',
@@ -49,23 +53,25 @@ const JsonContent = ({ state, updateState }) => {
           placeholder='Enter JSON...'
         />
       </div>
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '8px',
-        width: '100%',
-      }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px',
+          width: '100%',
+        }}
+      >
         <label
-            style={{
-              fontSize: '12px',
+          style={{
+            fontSize: '12px',
             color: '#64748b',
             fontWeight: '500',
-            }}
-          >
+          }}
+        >
           Preview
         </label>
-            <div
-              style={{
+        <div
+          style={{
             width: '100%',
             padding: '12px',
             backgroundColor: '#f1f5f9',
@@ -79,10 +85,10 @@ const JsonContent = ({ state, updateState }) => {
             minHeight: '44px',
             display: 'flex',
             alignItems: 'center',
-                fontFamily: 'monospace',
-                whiteSpace: 'pre-wrap',
-              }}
-            >
+            fontFamily: 'monospace',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
           {(() => {
             try {
               const parsed = JSON.parse(state.json);
@@ -91,7 +97,7 @@ const JsonContent = ({ state, updateState }) => {
               return 'Invalid JSON';
             }
           })()}
-            </div>
+        </div>
       </div>
     </div>
   );

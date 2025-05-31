@@ -1,8 +1,7 @@
 // textNode.js
 
-import NodeFactory from './NodeFactory';
+import NodeFactory from '../Factory/NodeFactory';
 import { useState, useEffect, useRef, useCallback } from 'react';
-
 
 // Helper function to extract variables from text (now also available in NodeFactory)
 const extractVariables = (text) => {
