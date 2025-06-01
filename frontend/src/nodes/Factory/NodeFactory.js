@@ -245,9 +245,22 @@ class NodeFactory {
   static createVariableInputs(config) {
     const { textField = 'text', variableRegex } = config;
 
+    // Keep track of input count
+    let inputCount = 0;
+
+    const generateInputId = () => {
+      return `input${inputCount++}`;
+    };
+
     return (state) => {
       const text = state[textField] || '';
-      return NodeFactory.extractVariableInputs(text, variableRegex);
+      const variables = NodeFactory.extractVariableInputs(text, variableRegex);
+      return variables.map((variable) => ({
+        id: variable.id,
+        label: variable.id,
+        type: 'default',
+        inputId: generateInputId(),
+      }));
     };
   }
 }
