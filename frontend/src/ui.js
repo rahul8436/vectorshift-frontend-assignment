@@ -20,6 +20,7 @@ import { NumberNode } from './nodes/SimpleNodes/numberNode';
 import { EchoNode } from './nodes/SimpleNodes/echoNode';
 import { SimpleTextNode } from './nodes/SimpleNodes/simpleTextNode';
 import { SelectNode } from './nodes/SimpleNodes/selectNode';
+import { simpleCounterNode } from './nodes/SimpleNodes/simpleCounterNode';
 
 import 'reactflow/dist/style.css';
 
@@ -40,6 +41,7 @@ const nodeTypes = {
   echo: EchoNode,
   simpleText: SimpleTextNode,
   select: SelectNode,
+  simpleCounter: simpleCounterNode,
 };
 
 const selector = (state) => ({

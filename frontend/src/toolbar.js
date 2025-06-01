@@ -120,6 +120,7 @@ export const PipelineToolbar = () => {
         <DraggableNode type='echo' label='Echo' />
         <DraggableNode type='select' label='Select' />
         <DraggableNode type='simpleText' label='Simple Text' />
+        <DraggableNode type='simpleCounter' label='Simple Counter' />
       </div>
     </div>
   );

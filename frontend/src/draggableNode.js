@@ -44,6 +44,7 @@ export const DraggableNode = ({ type, label }) => {
       simpleText: '📝',
       number: '🔢',
       toggle: '🔄',
+      simpleCounter: '🔢',
     };
     return icons[type] || '📦';
   };
